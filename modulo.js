@@ -1,4 +1,4 @@
-import { clase, hijo, animal, gato, perro } from "./clases.js";
+import { clase, hijo, animal, gato, perro, superHijo, emisor, receptor } from "./clases.js";
 
 const consola = new clase("fernando");
 
@@ -8,6 +8,12 @@ consola.despedida("Bejamin");
 const heredero = new hijo();
 
 heredero.casa();
+
+
+// herencia con super
+    const hijito=new superHijo()
+    hijito.metodo()
+
 
 // POLIMORFISMO: aunque las clases hijos comparten el mismo metodo, cada uno actua a su manera
 
@@ -19,3 +25,11 @@ const michi = new gato();
 animales.hacerruido();
 perrito.hacerruido();
 michi.hacerruido();
+
+
+
+// CALLBACK
+
+const recibirC= new receptor(new emisor)
+
+recibirC.imprimirCallback()

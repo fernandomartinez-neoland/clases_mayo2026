@@ -21,6 +21,21 @@ class padre {
 // la calse hijo es una extension del padre, lo cual le da acceso a los metodos del padre
 export class hijo extends padre {}
 
+// HERENCIA CON SUPER: es una manera de usar las variables del padre desde la clase del hijo
+
+export class superPadre {
+  nombre = "pepito";
+}
+
+export class superHijo extends superPadre {
+  constructor(nombre) {
+    super(nombre);
+  }
+  metodo() {
+    console.log("super hijo: ", this.nombre);
+  }
+}
+
 // POLIMORFISMO
 
 export class animal {
@@ -39,4 +54,26 @@ export class gato extends animal {
   hacerruido() {
     console.log("maulla");
   }
+}
+
+
+// CALLBACK
+
+
+export class emisor{
+    imprimir(){
+        console.log("meotodo del emisor")
+    }
+}
+
+export class receptor{
+    callback
+    constructor (callback){
+        this.callback=callback
+    }
+
+    imprimirCallback(){
+       this.callback.imprimir() 
+    }
+
 }
