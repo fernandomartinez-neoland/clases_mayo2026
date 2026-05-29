@@ -28,7 +28,7 @@ michi.hacerruido();
 
 
 
-// CALLBACK
+// CALLBACK: conciste en enviar una clase, funcion o metod a otra clase funcion o metodo y que esta disponga de todo lo que el parametro tenga
 
 const recibirC= new receptor(new emisor)
 
